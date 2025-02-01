@@ -7,9 +7,7 @@ let pokemonList = [
 
 // printArrayDetails function declaration
 function printArrayDetails(list) {
-  for (let i = 0; i < pokemonList.length; i++) {
-    let pokemon = pokemonList[i];
-
+  list.forEach(function (pokemon) {
     document.write('<div class="pokemon-card">');
 
     document.write(
@@ -22,9 +20,10 @@ function printArrayDetails(list) {
     }
 
     document.write("</div>");
-  }
+  });
 }
 
+// Call the function to print the details
 printArrayDetails(pokemonList);
 
 printArrayDetails(pokemonList2);
