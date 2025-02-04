@@ -20,30 +20,15 @@ let pokemonRepository = (function () {
   };
 })();
 
-pokemonRepository.getAll().forEach(function (pokemon) {
-  document.write('<div class="pokemon-card">');
-  document.write(
-    "<h2>" + pokemon.name + " (type: " + pokemon.types.join(", ") + ")</h2>"
-  );
-  document.write("<p>Height: " + pokemon.height + "</p>");
+pokemonRepository.getAll().forEach(function(pokemon) {
+  const pokemonListElement = document.querySelector('.pokemon-list'); 
 
-  if (pokemon.height > 170) {
-    document.write("<p>Wow, that's big!</p>");
-  }
+  const listItem = document.createElement('li'); 
 
-  document.write("</div>");
+  const button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('pokemon-button'); 
+
+  listItem.appendChild(button); 
+  pokemonListElement.appendChild(listItem); 
 });
-
-// Call the function to print the details
-printArrayDetails(pokemonList);
-
-printArrayDetails(pokemonList2);
-
-function divide(dividend, divisor) {
-  if (divisor === 0) {
-    return "You are trying to divide by 0";
-  } else {
-    let result = dividend / divisor;
-    return result;
-  }
-}
