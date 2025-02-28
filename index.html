@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>A Pokemon App</title>
+    <title>Simple JS App</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -43,20 +43,21 @@
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
         </ul>
       </div>
     </nav>
     <div class="container">
-      <h1>A Pokemon collection</h1>
-      <div class="search-container">
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search Pokemon..."
-          class="form-control"
-        />
+      <h1>A Pokemon Collection</h1>
+      <div class="pokemon-list-container" aria-label="List of Pokemon">
+        <ul class="pokemon-list list-group"></ul>
       </div>
-      <div class="pokemon-grid" aria-label="List of Pokemon"></div>
+
       <div
         class="modal fade"
         id="pokemonModal"
@@ -91,6 +92,7 @@
         </div>
       </div>
     </div>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
