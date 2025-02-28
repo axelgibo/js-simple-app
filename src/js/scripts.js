@@ -94,3 +94,19 @@ pokemonRepository.loadList().then(function () {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+const searchInput = document.getElementById("search-input");
+const pokemonItems = document.querySelectorAll(".pokemon-item");
+
+searchInput.addEventListener("input", () => {
+  const searchTerm = searchInput.value.toLowerCase();
+
+  pokemonItems.forEach((item) => {
+    const pokemonName = item.textContent.toLowerCase();
+    if (pokemonName.includes(searchTerm)) {
+      item.style.display = "block"; // Show matching items
+    } else {
+      item.style.display = "none"; // Hide non-matching items
+    }
+  });
+});
