@@ -1,5 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
+  let filteredPokemonList = [];
 
   function getAll() {
     return pokemonList;

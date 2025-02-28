@@ -63,3 +63,17 @@ h1 {
 .modal-body {
   text-align: center;
 }
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+  gap: 20px; /* Adjust spacing as needed */
+}
+
+.pokemon-item {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center content */
+}
