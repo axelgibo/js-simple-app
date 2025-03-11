@@ -11,9 +11,11 @@ let pokemonRepository = (function () {
   }
 
   function addListItem(pokemon) {
-    const pokemonListElement = document.querySelector(".pokemon-list");
-    const listItem = document.createElement("li");
-    listItem.classList.add("list-group-item");
+    const pokemonListElement = document.querySelector(
+      ".pokemon-list-container"
+    );
+    const card = document.createElement("div");
+    card.classList.add("pokemon-card");
 
     const button = document.createElement("button");
     button.innerText = pokemon.name;
@@ -26,8 +28,8 @@ let pokemonRepository = (function () {
       showDetails(pokemon);
     });
 
-    listItem.appendChild(button);
-    pokemonListElement.appendChild(listItem);
+    card.appendChild(button);
+    pokemonListElement.appendChild(card);
   }
 
   function loadList() {
